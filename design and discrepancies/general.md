@@ -1,40 +1,40 @@
 ## Modifications
-- division by 0 in floats according IEEE 754
+- division by 0 in floats and operations with infinity according IEEE 754
 
-operation | Math
---------- | ----
-x / 0 | ∞
+  operation | Math
+  --------- | ----
+  x / 0 | ∞
 
-### Arithmetic operations between real numbers and infinity
+  ### Arithmetic operations between real numbers and infinity
 
-operation | Math
---------- | ----
-x + ∞ | ∞
-x - ∞ | -∞
-x / ∞ | 0
-x / -∞ | 0
-x > 0 => x * ∞ | ∞
-x > 0 => x * -∞ | -∞
-x < 0 => x * ∞ | -∞
-x < 0 => x * -∞ | ∞
+  operation | Math
+  --------- | ----
+  x + ∞ | ∞
+  x - ∞ | -∞
+  x / ∞ | 0
+  x / -∞ | 0
+  x > 0 => x * ∞ | ∞
+  x > 0 => x * -∞ | -∞
+  x < 0 => x * ∞ | -∞
+  x < 0 => x * -∞ | ∞
 
-### Arithmetic operations between infinities
+  ### Arithmetic operations between infinities
 
-operation | Math
---------- | ----
-∞ + ∞ | ∞
--∞ - ∞ | -∞
-∞ * ∞ | ∞
--∞ * -∞ | ∞
+  operation | Math
+  --------- | ----
+  ∞ + ∞ | ∞
+  -∞ - ∞ | -∞
+  ∞ * ∞ | ∞
+  -∞ * -∞ | ∞
 
-### Undefineds
-0 * ∞
+  ### Undefineds
+  0 * ∞
 
-0 * -∞
+  0 * -∞
 
-∞ - ∞
+  ∞ - ∞
 
-±∞ / ±∞
+  ±∞ / ±∞
 
 - generics: `<T>` or [T] (I prefer [T] if possible)
 - [test]
@@ -45,19 +45,20 @@ operation | Math
   }
   ```
 - bitwise and logical operators for match
-Operator | Description | Type
-:------: | :---------: | :--:
-`#` | bitwise NOT | integers
-& | bitwise AND | integers
-`|` | bitwise OR | integers
-~ | bitwise XOR | integers
 
-Operator | Description | Type
-:------: | :---------: | :--:
-! | logical NOT | bools
-&& | logical AND | bools
-`||` | logical OR | bools
-~= | logical XOR | bools
+  Operator | Description | Type
+  :------: | :---------: | :--:
+  `#` | bitwise NOT | integers
+  & | bitwise AND | integers
+  `|` | bitwise OR | integers
+  ~ | bitwise XOR | integers
+
+  Operator | Description | Type
+  :------: | :---------: | :--:
+  ! | logical NOT | bools
+  && | logical AND | bools
+  `||` | logical OR | bools
+  ~= | logical XOR | bools
 
 ## Lack
 - constructors and destructors for structs
@@ -79,10 +80,13 @@ Operator | Description | Type
       this.y = 0
     }
   }
+  
+  p1 := Point{4, 5}
+  p2 := Point.vertival{7}
   ```
 - Wrapping Arithmetic Operators: +% or `+~`, *% or `+~`, /% or `/~` https://ziglang.org/documentation/0.8.0/#toc-Table-of-Operators
-- null union @int or #int or null | u8 <- (I prefer this) https://ziglang.org/documentation/0.8.0/#Optionals
-- binary format specifier ${10:b} // 1010
+- null union: null | u8 https://ziglang.org/documentation/0.8.0/#Optionals
+- binary format specifier ```${10:b} // 1010```
 
 ### Functions
 - pipe operator: |> https://elixirschool.com/en/lessons/basics/pipe-operator/
