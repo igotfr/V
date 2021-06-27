@@ -138,7 +138,6 @@
   }
 	
   // with inline operator
-  ```v
   cond =>
     false => println('if')
     true => println('else if')
