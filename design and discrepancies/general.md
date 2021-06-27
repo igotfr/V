@@ -50,14 +50,14 @@
   :------: | :---------: | :--:
   `#` | bitwise NOT | integers
   & | bitwise AND | integers
-  `|` | bitwise OR | integers
+  \| | bitwise OR | integers
   ~ | bitwise XOR | integers
 
   Operator | Description | Type
   :------: | :---------: | :--:
   ! | logical NOT | bools
   && | logical AND | bools
-  `||` | logical OR | bools
+  \|\| | logical OR | bools
   ~= | logical XOR | bools
 
 ## Lack
