@@ -45,15 +45,19 @@ operation | Math
   }
   ```
 - bitwise and logical operators for match
-#    bitwise NOT            integers
-&    bitwise AND            integers
-|    bitwise OR             integers
-~    bitwise XOR            integers
+Operator | Description | Type
+:------: | :---------: | :--:
+`#` | bitwise NOT | integers
+& | bitwise AND | integers
+`|` | bitwise OR | integers
+~ | bitwise XOR | integers
 
-!    logical NOT            bools
-&&   logical AND            bools
-||   logical OR             bools
-~=   logical XOR            bools
+Operator | Description | Type
+:------: | :---------: | :--:
+! | logical NOT | bools
+&& | logical AND | bools
+`||` | logical OR | bools
+~= | logical XOR | bools
 
 ## Lack
 - constructors and destructors for structs
