@@ -44,7 +44,7 @@
     assert 2 == 2
   }
   ```
-- bitwise and logical operators for match
+- bitwise and logical operators matching
 
   Operator | Description | Type
   :------: | :---------: | :--:
