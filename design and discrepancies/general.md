@@ -36,7 +36,7 @@ operation | Math
 
 ±∞ / ±∞
 
-- generics: <T> or [T] (I prefer [T] if possible)
+- generics: `<T>` or [T] (I prefer [T] if possible)
 - [test]
   ```v
   [test]
