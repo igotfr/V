@@ -1,5 +1,6 @@
 ## Modifications
 - division by 0 in floats according IEEE 754
+
 operation | Math
 --------- | ----
 x / 0 | ∞
