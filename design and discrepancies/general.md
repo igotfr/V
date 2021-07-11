@@ -37,7 +37,7 @@
   ±∞ / ±∞
 
 - generics: `<T>` or [T] (I prefer [T] if possible)
-- [test]
+- [test] attribute
   ```v
   [test]
   fn f() {
@@ -61,31 +61,29 @@
   ~= | logical XOR | bools
 
 ## Lack
-- constructors and destructors for structs
+- static fields and methods (class variables and methods)
   ```v
   struct Point {
     x int
     y int
 
-    new create(x int, y int) {
-      this.x = x
-      this.y = y
-    }
-    
-    // syntax sugar, shorthand
-    new create(this.x, this.y)
-  
-    new vertical(x int) {
-      this.x = x
-      this.y = 0
+  static:
+    amount u32
+  }
+
+  fn (static p Point) vertical(x_ int) Point {
+    return Point {
+      x: x_
+      y: 0
     }
   }
-  
+
   p1 := Point{4, 5}
-  p2 := Point.vertival{7}
+  p2 := Point.vertival(7)
+  _ = Point.amount
   ```
 - Wrapping Arithmetic Operators: +% or `+~`, *% or `+~`, /% or `/~` https://ziglang.org/documentation/0.8.0/#toc-Table-of-Operators
-- null union: null | u8 https://ziglang.org/documentation/0.8.0/#Optionals
+- null union: null | u8 for  https://ziglang.org/documentation/0.8.0/#Optionals
 - binary format specifier ```${10:b} // 1010```
 
 ### Functions
