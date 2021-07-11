@@ -83,7 +83,7 @@
   _ = Point.amount
   ```
 - Wrapping Arithmetic Operators: +% or `+~`, *% or `+~`, /% or `/~` https://ziglang.org/documentation/0.8.0/#toc-Table-of-Operators
-- null union: null | u8 for  https://ziglang.org/documentation/0.8.0/#Optionals
+- null union for data types that are not references: null | u8 for  https://ziglang.org/documentation/0.8.0/#Optionals
 - binary format specifier ```${10:b} // 1010```
 
 ### Functions
