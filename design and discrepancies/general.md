@@ -61,6 +61,8 @@
   ~= | logical XOR | bools
 
 ## Lack
+- optional typing on variable declaration https://github.com/vlang/v/issues/11408 closed
+
 - static fields and methods (class variables and methods)
   ```v
   struct Point {
@@ -115,7 +117,7 @@
 - array generator
 
 ### Blocks
-- inline block =>
+- inline block => https://github.com/vlang/v/issues/11345 closed
   ```v
   for nucleotide in dna =>
     match nucleotide =>
@@ -132,14 +134,14 @@
   }
   ```
 
-<s>- cond
+- <s>cond</s> https://github.com/vlang/v/issues/11346 <s>
   ```v
   cond {
     false { println('if') }
     true { println('else if') }
     else { println('else') }
   }
-	
+
   // with inline operator
   cond =>
     false => println('if')
