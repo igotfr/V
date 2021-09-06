@@ -132,8 +132,7 @@
   }
   ```
 
-<s>
-- cond
+<s>- cond
   ```v
   cond {
     false { println('if') }
