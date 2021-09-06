@@ -37,7 +37,7 @@
   ±∞ / ±∞
 
 - generics: `<T>` or [T] (I prefer [T] if possible)
-- [test] attribute
+- [test] attribute https://github.com/vlang/v/issues/11410
   ```v
   [test]
   fn f() {
@@ -84,13 +84,16 @@
   p2 := Point.vertival(7)
   _ = Point.amount
   ```
-- Wrapping Arithmetic Operators: +% or `+~`, *% or `+~`, /% or `/~` (I prefer `+~`) https://ziglang.org/documentation/0.8.0/#toc-Table-of-Operators
-- null union for data types that are not references: u8_null https://ziglang.org/documentation/0.8.0/#Optionals
+- Wrapping Arithmetic Operators: +% or `+~`, *% or `+~`, /% or `/~` (I prefer `+~`) https://github.com/vlang/v/issues/11344
+https://ziglang.org/documentation/0.8.0/#toc-Table-of-Operators
+
+- null (or none) and anonymous sumtypes: (u8 | null) https://github.com/vlang/v/issues/11230
+https://ziglang.org/documentation/0.8.0/#Optionals
   ```v
-  n := int_null(45)
-  s := string_null(null)
+  n := (int | null)(45)
+  s := (string | null)(null)
   ```
-- binary format specifier ```${10:b} // 1010```
+- binary format specifier ```${10:b} // 1010``` https://github.com/vlang/v/issues/11409
 
 ### Functions
 - pipe operator: |> https://elixirschool.com/en/lessons/basics/pipe-operator/
