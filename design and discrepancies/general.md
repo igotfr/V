@@ -131,6 +131,8 @@
     cat sample.txt | head -7 | tail -5
   }
   ```
+
+<s>
 - cond
   ```v
   cond {
@@ -145,4 +147,6 @@
     true => println('else if')
     else => println('else')
   ```
+</s>
+
 - for-else
