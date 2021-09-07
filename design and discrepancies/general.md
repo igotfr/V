@@ -93,7 +93,7 @@ https://ziglang.org/documentation/0.8.0/#Optionals
   n := (int | null)(45)
   s := (string | null)(null)
   ```
-- binary format specifier ```${10:b} // 1010``` https://github.com/vlang/v/issues/11409
+- <s>binary format specifier ```${10:b} // 1010``` https://github.com/vlang/v/issues/11409</s>
 
 ### Functions
 - pipe operator: |> https://elixirschool.com/en/lessons/basics/pipe-operator/
