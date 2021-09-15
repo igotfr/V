@@ -36,9 +36,9 @@ fn selection_sort<T>(array_to_sort []T) []T {
 
     //if i != loi {
       array_to_sort_clone[i], array_to_sort_clone[ilo] = array_to_sort_clone[ilo], array_to_sort_clone[i]
-      /*tmp = array_to_sort[i]
-      array_to_sort[i] = array_to_sort[ilo]
-      array_to_sort[ilo] = tmp*/
+      /*tmp = array_to_sort_clone[i]
+      array_to_sort_clone[i] = array_to_sort_clone[ilo]
+      array_to_sort_clone[ilo] = tmp*/
     //}
   }
 
