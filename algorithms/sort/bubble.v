@@ -21,9 +21,9 @@ fn bubble_sort<T>(array_to_sort []T) []T {
     for j in i + 1..array_to_sort_clone.len {
       if array_to_sort_clone[i] > array_to_sort_clone[j] {
         array_to_sort_clone[i], array_to_sort_clone[j] = array_to_sort_clone[j], array_to_sort_clone[i]
-        /*tmp = array_to_sort[i]
-        array_to_sort[i] = array_to_sort[j]
-        array_to_sort[j] = tmp*/
+        /*tmp = array_to_sort_clone[i]
+        array_to_sort_clone[i] = array_to_sort_clone[j]
+        array_to_sort_clone[j] = tmp*/
       }
     }
   }
