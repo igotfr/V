@@ -1,6 +1,8 @@
 fn bubble_sort_mutation<T>(mut array_to_sort []T) {
-  for i in 0..array_to_sort.len {
-    for j in i + 1..array_to_sort.len {
+  array_to_sort_len := array_to_sort.len
+
+  for i in 0..array_to_sort_len {
+    for j in i + 1..array_to_sort_len {
       if array_to_sort[i] > array_to_sort[j] {
         array_to_sort[i], array_to_sort[j] = array_to_sort[j], array_to_sort[i]
         /*tmp := array_to_sort[i]
@@ -13,9 +15,10 @@ fn bubble_sort_mutation<T>(mut array_to_sort []T) {
 
 fn bubble_sort<T>(array_to_sort []T) []T {
   mut array_to_sort_clone := array_to_sort.clone()
+  array_to_sort_clone_len := array_to_sort_clone.len
 
-  for i in 0..array_to_sort_clone.len {
-    for j in i + 1..array_to_sort_clone.len {
+  for i in 0..array_to_sort_clone_len {
+    for j in i + 1..array_to_sort_clone_len {
       if array_to_sort_clone[i] > array_to_sort_clone[j] {
         array_to_sort_clone[i], array_to_sort_clone[j] = array_to_sort_clone[j], array_to_sort_clone[i]
         /*tmp := array_to_sort_clone[i]
