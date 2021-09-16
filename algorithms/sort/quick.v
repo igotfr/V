@@ -46,3 +46,4 @@ fn quick_sort<T>(array_to_sort []T, compare fn (a T, b T) bool) []T {
 
 	return array_to_sort_clone
 }
+g
