@@ -1,14 +1,14 @@
 // ifirst_part: index of first element of partition
 // ilast_part: index of last element of partition
-fn partition<T>(mut arr []T, ifirst_part int, ilast_part int, compare fn (a T, b T) bool) int {
-  pivot := arr[ilast_part]
+fn partition<T>(mut array_to_sort []T, ifirst_part int, ilast_part int, compare fn (a T, b T) bool) int {
+  pivot := array_to_sort[ilast_part]
   mut i := ifirst_part - 1
 
   for j in ifirst_part..ilast_part {
-    if compare(arr[j], pivot) {
+    if compare(array_to_sort[j], pivot) {
       i++
       //if i != j {
-        arr[i], arr[j] = arr[j], arr[i]
+        array_to_sort[i], array_to_sort[j] = array_to_sort[j], array_to_sort[i]
         /*tmp := array_to_sort[i]
         array_to_sort[i] = array_to_sort[j]
         array_to_sort[j] = tmp*/
@@ -16,7 +16,7 @@ fn partition<T>(mut arr []T, ifirst_part int, ilast_part int, compare fn (a T, b
     }
   }
 
-  arr[i + 1], arr[ilast_part] = arr[ilast_part], arr[i + 1]
+  array_to_sort[i + 1], array_to_sort[ilast_part] = array_to_sort[ilast_part], array_to_sort[i + 1]
   /*tmp := array_to_sort[i + 1]
   array_to_sort[i + 1] = array_to_sort[ilast_part]
   array_to_sort[ilast_part] = tmp*/
@@ -26,12 +26,12 @@ fn partition<T>(mut arr []T, ifirst_part int, ilast_part int, compare fn (a T, b
 
 // ifirst: index of first
 // ilast: index of last
-fn quick_sort_helper<T>(mut arr []T, ifirst int, ilast int, compare fn (a T, b T) bool) {
+fn quick_sort_helper<T>(mut array_to_sort []T, ifirst int, ilast int, compare fn (a T, b T) bool) {
   if ifirst < ilast {
-    partition_index := partition<T>(mut arr, ifirst, ilast, compare)
+    partition_index := partition<T>(mut array_to_sort, ifirst, ilast, compare)
 
-    quick_sort_helper<T>(mut arr, ifirst, partition_index - 1, compare)
-    quick_sort_helper<T>(mut arr, partition_index + 1, ilast, compare)
+    quick_sort_helper<T>(mut array_to_sort, ifirst, partition_index - 1, compare)
+    quick_sort_helper<T>(mut array_to_sort, partition_index + 1, ilast, compare)
   }
 }
 
