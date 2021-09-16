@@ -35,7 +35,7 @@ fn quick_sort_helper<T>(mut arr []T, ifirst int, ilast int, compare fn (a T, b T
   }
 }
 
-fn quick_sort_<T>(mut array_to_sort []T, compare fn (a T, b T) bool) {
+fn quick_sort_mutation<T>(mut array_to_sort []T, compare fn (a T, b T) bool) {
   quick_sort_helper<T>(mut array_to_sort, 0, array_to_sort.len - 1, compare)
 }
 
