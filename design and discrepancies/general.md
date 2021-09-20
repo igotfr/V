@@ -98,6 +98,15 @@
 - Wrapping Arithmetic Operators: +% or `+~`, *% or `+~`, /% or `/~` (I prefer `+~`) https://github.com/vlang/v/issues/11344
 https://ziglang.org/documentation/0.8.0/#toc-Table-of-Operators
 
+  +~ (wraparound addition)
+  -~ (wraparound subtraction)
+  *~ (wraparound negation)
+  /~ (wraparound multiplication)
+
+  ```v
+  u8(129) +~ u8(129) // error
+  ```
+
 - null (or none) and anonymous sumtypes: (u8 | null) `Alternative` https://github.com/vlang/v/issues/11230
 https://ziglang.org/documentation/0.8.0/#Optionals
   ```v
