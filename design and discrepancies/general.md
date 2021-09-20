@@ -130,9 +130,9 @@ https://ziglang.org/documentation/0.8.0/#Optionals
 - shorthand for anonymous functions: it. `Alternative`
   ```v
   sum := fn (a int, b int) int { return a + b }
-  // with shorthand
+  // with capture function
   sum := fn int { return int(it.1) + int(it.2) }
-  // with shorthand and inline return ->
+  // with capture function and inline return ->
   sum := fn int -> int(it.1) + int(it.2)
   ```
 
