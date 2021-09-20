@@ -36,7 +36,7 @@
 
   ±∞ / ±∞
 
-- generics: `<T>` or [T] (I prefer [T] if possible)
+- <s>generics: `<T>` or [T] (I prefer [T] if possible)</s>
 - [test] attribute https://github.com/vlang/v/issues/11410
   ```v
   [test]
@@ -63,7 +63,7 @@
 ## Lack
 - optional typing on variable declaration https://github.com/vlang/v/issues/11408 closed
 
-- static fields and methods (class variables and methods)
+- constructors
   ```v
   struct Point {
     x int
@@ -73,7 +73,7 @@
     amount u32
   }
 
-  fn (static p Point) vertical(x_ int) Point {
+  fn Point.vertical(x_ int) Point {
     return Point {
       x: x_
       y: 0
@@ -154,3 +154,12 @@ https://ziglang.org/documentation/0.8.0/#Optionals
 </s>
 
 - for-else
+
+## Alternatives 
+- [test] attribute https://github.com/vlang/v/issues/11410
+  ```v
+  [test]
+  fn f() {
+    assert 2 == 2
+  }
+  ```
