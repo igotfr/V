@@ -99,8 +99,11 @@
 https://ziglang.org/documentation/0.8.0/#toc-Table-of-Operators
 
   +~ (wraparound addition)
+
   -~ (wraparound subtraction)
+
   *~ (wraparound negation)
+
   /~ (wraparound multiplication)
 
   ```v
