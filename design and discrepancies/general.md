@@ -37,13 +37,15 @@
   ±∞ / ±∞
 
 - <s>generics: `<T>` or [T] (I prefer [T] if possible)</s>
-- [test] attribute https://github.com/vlang/v/issues/11410
+
+- [test] attribute `Alternative` https://github.com/vlang/v/issues/11410
   ```v
   [test]
   fn f() {
     assert 2 == 2
   }
   ```
+
 - bitwise and logical operators matching
 
   Operator | Description | Type
@@ -61,9 +63,9 @@
   ~= | logical XOR | bools
 
 ## Lack
-- optional typing on variable declaration https://github.com/vlang/v/issues/11408 closed
+- optional typing on variable declaration `Alternative` https://github.com/vlang/v/issues/11408 closed
 
-- constructors
+- constructors `Alternative`
   ```v
   struct Point {
     x int
@@ -87,18 +89,17 @@
 - Wrapping Arithmetic Operators: +% or `+~`, *% or `+~`, /% or `/~` (I prefer `+~`) https://github.com/vlang/v/issues/11344
 https://ziglang.org/documentation/0.8.0/#toc-Table-of-Operators
 
-- null (or none) and anonymous sumtypes: (u8 | null) https://github.com/vlang/v/issues/11230
+- null (or none) and anonymous sumtypes: (u8 | null) `Alternative` https://github.com/vlang/v/issues/11230
 https://ziglang.org/documentation/0.8.0/#Optionals
   ```v
   n := (int | null)(45)
   s := (string | null)(null)
   ```
-- <s>binary format specifier ```${10:b} // 1010``` https://github.com/vlang/v/issues/11409</s>
 
 ### Functions
-- pipe operator: |> https://elixirschool.com/en/lessons/basics/pipe-operator/
-- chaining operator: .> https://tutorial.ponylang.io/expressions/methods.html#chaining
-- shorthand for anonymous functions: it.
+- pipe operator: |> `Alternative` https://elixirschool.com/en/lessons/basics/pipe-operator/
+- chaining operator: .> `Alternative` https://tutorial.ponylang.io/expressions/methods.html#chaining
+- shorthand for anonymous functions: it. `Alternative`
   ```v
   sum := fn (a int, b int) int { return a + b }
   // with shorthand
@@ -115,12 +116,12 @@ https://ziglang.org/documentation/0.8.0/#Optionals
   // or
   arr[@0] // 5
   ```
-- Overloadable array indexing [0, 1]
+- Overloadable array indexing [0, 1] `Alternative`
 - range operator : https://erik-engheim.medium.com/ranges-and-slices-in-julia-and-python-bb0fd893a20c
 - array generator
 
 ### Blocks
-- inline block => https://github.com/vlang/v/issues/11345 closed
+- inline block => `Alternative` https://github.com/vlang/v/issues/11345 closed
   ```v
   for nucleotide in dna =>
     match nucleotide =>
@@ -137,29 +138,4 @@ https://ziglang.org/documentation/0.8.0/#Optionals
   }
   ```
 
-- <s>cond</s> https://github.com/vlang/v/issues/11346 <s>
-  ```v
-  cond {
-    false { println('if') }
-    true { println('else if') }
-    else { println('else') }
-  }
-
-  // with inline operator
-  cond =>
-    false => println('if')
-    true => println('else if')
-    else => println('else')
-  ```
-</s>
-
 - for-else
-
-## Alternatives 
-- [test] attribute https://github.com/vlang/v/issues/11410
-  ```v
-  [test]
-  fn f() {
-    assert 2 == 2
-  }
-  ```
