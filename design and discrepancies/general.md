@@ -120,13 +120,20 @@ https://ziglang.org/documentation/0.8.0/#Optionals
 ### Functions
 - pipe operator: |> `Alternative` https://elixirschool.com/en/lessons/basics/pipe-operator/
 - chaining operator: .> `Alternative` https://tutorial.ponylang.io/expressions/methods.html#chaining
+- inline return: -> `Alternative`
+  ```v
+  fn f() int { return 4 }
+
+  // with inline return
+  fn f() int -> 4
+  ```
 - shorthand for anonymous functions: it. `Alternative`
   ```v
   sum := fn (a int, b int) int { return a + b }
   // with shorthand
   sum := fn int { return int(it.1) + int(it.2) }
-  // with shorthand and inline block =>
-  sum := fn int => int(it.1) + int(it.2)
+  // with shorthand and inline return ->
+  sum := fn int -> int(it.1) + int(it.2)
   ```
 
 ### Array
