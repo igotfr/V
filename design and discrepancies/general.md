@@ -74,7 +74,7 @@
   i_s = 'berg'
   ```
 
-- constructors `Alternative`
+- constructors and static methods `Alternative` https://github.com/vlang/v/issues/11532
   ```v
   struct Point {
     x int
