@@ -64,6 +64,15 @@
 
 ## Lack
 - optional typing on variable declaration `Alternative` https://github.com/vlang/v/issues/11408 closed
+  ```v
+  i int := 45
+
+
+  type Int_string = u8 | string
+
+  mut i_s Int_string := u8(77)
+  i_s = 'berg'
+  ```
 
 - constructors `Alternative`
   ```v
