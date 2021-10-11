@@ -17,3 +17,6 @@ each nucleotide with its complement:
 * `C` -> `G`
 * `T` -> `A`
 * `A` -> `U`
+
+### Source
+[Hyperphysics](http://hyperphysics.phy-astr.gsu.edu/hbase/Organic/transcription.html)
