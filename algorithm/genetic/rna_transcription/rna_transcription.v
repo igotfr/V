@@ -7,7 +7,9 @@ struct ToRNAError {
   code int
 }
 
-fn to_rna(dna string) ?string {
+type StringMap = string | map[string]string
+
+fn to_rna(dna string) ?StringMap {
   mut rna := new_builder(0)
   mut has_error := false
 
