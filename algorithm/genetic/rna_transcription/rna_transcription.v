@@ -25,7 +25,7 @@ fn to_rna(dna string) ?string {
   }
 
   if has_error {
-    return IError(ToRNAError{msg: 'Invalid RNA: ' + rna.str()})
+    return IError(ToRNAError{msg: rna.str()})
   }
 
   return rna.str()
