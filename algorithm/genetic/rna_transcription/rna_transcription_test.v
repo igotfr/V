@@ -21,5 +21,5 @@ fn test_it_transcribes_all_dna_nucleotides_to_rna_equivalents() {
 }
 
 fn test_it_transcribes_all_dna_nucleotides_to_rna_equivalents_including_invalid_dna_nucleotides() {
-  assert to_rna('PCJTGGTCTTAA') or { err.msg } == 'Invalid RNA: ?G?ACCAGAAUU'
+  assert to_rna('PCJTGGTCTTAA') or { 'Invalid DNA: ' + err.msg } == 'Invalid DNA: ?G?ACCAGAAUU'
 }
